@@ -15,19 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('messages', function () {
-    $messages = \App\Message::get();
-    return view('messages', ['messages' => $messages]);
-})->name('messages');
+Route::get('messages', 'MessageController@getMessages');
 
-Route::post('say_something', function() {
-    // save to database
-
-    $message = new \App\Message();
-    $message->message = \Illuminate\Support\Facades\Input::get('message');
-    $message->save();
-
-
-    return Redirect::to('messages');
-
-});
+Route::post('say_something', 'MessageController@saySomething');

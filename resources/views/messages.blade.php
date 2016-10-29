@@ -2,11 +2,21 @@
 
 <head>
     <title>
-
+        Message Board
     </title>
 </head>
 <body>
 <h1>Message Board</h1>
+
+@if ($errors->count() > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <form action="say_something" method="post">
 
@@ -31,7 +41,6 @@
     </tr>
     @endforeach
 </table>
-
 
 </body>
 
