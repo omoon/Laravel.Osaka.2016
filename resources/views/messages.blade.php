@@ -54,6 +54,8 @@
         @endforeach
     </table>
 
+    {{ $messages->links() }}
+
 </div>
 </body>
 
