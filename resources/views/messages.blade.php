@@ -32,7 +32,7 @@
         </div>
     @endif
 
-    <form action="say_something" method="post">
+    <form action="{{ URL::route('say_something') }}" method="post">
 
         {{ csrf_field() }}
 

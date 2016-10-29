@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('messages', 'MessageController@getMessages');
+Route::get('messages', 'MessageController@getMessages')->name('messages');
 
-Route::post('say_something', 'MessageController@saySomething');
+Route::post('say_something', 'MessageController@saySomething')->name('say_something');
