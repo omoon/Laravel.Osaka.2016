@@ -27,7 +27,7 @@ class MessageController extends BaseController
         $message = new Message();
         $message->message = $request->get('message');
         $message->save();
-        return \Redirect::to('messages');
+        return \Redirect::back();
 
     }
 }
