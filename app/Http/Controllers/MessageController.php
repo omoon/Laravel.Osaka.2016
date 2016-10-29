@@ -15,7 +15,7 @@ class MessageController extends BaseController
 
     public function getMessages()
     {
-        $messages = Message::get();
+        $messages = Message::orderBy('created_at', 'desc')->get();
         return view('messages', ['messages' => $messages]);
     }
 
