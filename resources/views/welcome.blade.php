@@ -75,7 +75,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel.Osaka
+                    <a href="{{ URL::route('messages') }}">Laravel.Osaka</a>
                 </div>
 
                 <div class="links">
